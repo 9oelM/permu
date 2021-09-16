@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from itertools import permutations
 import argparse
 from pathlib import Path
@@ -59,7 +60,7 @@ def generate_permutations(*allParams):
     if (exaxct_permutation_length and exaxct_permutation_length != -1):
         generate_permutation_at_length(wordlist_arr, exaxct_permutation_length, args.v)
     else:
-        for permutation_length in range(1, permutation_max_length): 
+        for permutation_length in range(1, permutation_max_length + 1): 
             generate_permutation_at_length(wordlist_arr, permutation_length, args.v)
 
 def run():
